@@ -18,7 +18,7 @@ export default () => (
           </a>
         </div>
       </section>
-      <section>
+      {/* <section>
         <div className="container grid">
           <article className="card">
             <h2>Faculty</h2>
@@ -51,7 +51,7 @@ export default () => (
             </ul>
           </article>
         </div>
-      </section>
+      </section> */}
     </main>
     <footer className="app-footer">
       <div className="container">© Minneapolis College of Art and Design</div>
