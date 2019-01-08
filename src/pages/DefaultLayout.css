@@ -1,0 +1,22 @@
+.default-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.app-footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+}
