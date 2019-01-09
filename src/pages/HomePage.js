@@ -20,15 +20,10 @@ export default () => (
     <section>
       <div className="container grid">
         <article className="card">
-          <h2>Students</h2>
-          <ul>
-            <li>
-              <Link to="/orientation">Canvas Orientation</Link>
-            </li>
-            <li>
-              <a href="https://learn.mcad.edu">Blackboard</a>
-            </li>
-          </ul>
+          <h2>New to Canvas?</h2>
+          <p>
+            Watch the <Link to="/orientation">Canvas Orientation</Link>
+          </p>
         </article>
       </div>
     </section>
