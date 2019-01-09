@@ -1,0 +1,8 @@
+.orientation-student-page {
+  counter-reset: section-counter;
+
+  h2:before {
+    counter-increment: section-counter;
+    content: counter(section-counter) ". ";
+  }
+}

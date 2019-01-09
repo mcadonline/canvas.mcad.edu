@@ -16,3 +16,8 @@
   display: inline-block;
   margin: 0 0.5em;
 }
+
+.app-header a {
+  color: black;
+  text-decoration: none;
+}

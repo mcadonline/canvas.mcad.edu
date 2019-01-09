@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DefaultLayout from "./DefaultLayout";
 
 import "./HomePage.css";
@@ -16,39 +17,20 @@ export default () => (
         </a>
       </div>
     </section>
-    {/* <section>
-        <div className="container grid">
-          <article className="card">
-            <h2>Faculty</h2>
-            <ul>
-              <li>
-                <a href="#!">🚀 Learn about Teaching with Canvas</a>
-              </li>
-              <li>
-                <a href="#!">🏖 Request a Sandbox Course</a>
-              </li>
-              <li>
-                <a href="#!">
-                  ⏰ Schedule a one-on-one session with Online Learning
-                </a>
-              </li>
-              <li>
-                <a href="#!">🙋 Get Help from Online Learning</a>
-              </li>
-            </ul>
-          </article>
-          <article className="card">
-            <h2>Students</h2>
-            <ul>
-              <li>
-                <a href="#!">💡 Learn about Canvas</a>
-              </li>
-              <li>
-                <a href="#!">🙋‍♂️ Get Help from Online Learning</a>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section> */}
+    <section>
+      <div className="container grid">
+        <article className="card">
+          <h2>Students</h2>
+          <ul>
+            <li>
+              <Link to="/orientation">Canvas Orientation</Link>
+            </li>
+            <li>
+              <a href="https://learn.mcad.edu">Blackboard</a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
   </DefaultLayout>
 );

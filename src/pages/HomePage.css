@@ -46,8 +46,10 @@
 .card {
   background: #eee;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
   border-radius: 0.25rem;
+  max-width: 40rem;
+  text-align: center;
 }
 
 .card h2 {
@@ -67,10 +69,4 @@
 
 .card a {
   text-decoration: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  grid-gap: 1rem;
 }
