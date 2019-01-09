@@ -9,10 +9,10 @@ export default ({ title, src, children }) => (
       src={src}
       // width="640"
       // height="401"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen
+      frameBorder="0"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+      allowFullScreen={true}
     />
     {children}
   </div>
