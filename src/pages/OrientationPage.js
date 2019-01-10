@@ -16,7 +16,7 @@ export default () => (
     </header>
     <section className="section-interlude">
       <img src={turtleImg} alt="Dragon Turtle by Alex Mitchell" />
-      <p className="image-by">Illustration by Alex Mitchell, MFA '15</p>
+      <p className="image-by">Illustration by Alex Mitchell, MFA &rsquo;16</p>
     </section>
     <section className="section-intro">
       <div className="container">
@@ -225,14 +225,16 @@ export default () => (
           </p>
         </Accordion>
         <Accordion title="How do I buy books or supplies for my class?">
-          You can find your required textbook information at the{" "}
-          <a
-            href="https://intranet.mcad.edu/department/art-cellar-and-bookstore"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            MCAD Art Cellar and Bookstore
-          </a>
+          <p>
+            You can find your required textbook information at the{" "}
+            <a
+              href="https://intranet.mcad.edu/department/art-cellar-and-bookstore"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MCAD Art Cellar and Bookstore
+            </a>
+          </p>
         </Accordion>
         <Accordion title="I don't see my class on Canvas or Blackboard. When will it show up?">
           <p>
