@@ -149,28 +149,33 @@ export default () => (
               <th>Faculty</th>
             </tr>
             <tr>
+              <td>Applied Arts and Designed Objects</td>
+              <td>G. Gasterland-Gustafsson</td>
+            </tr>
+            <tr>
               <td>Creative Leadership</td>
               <td>A. Nowak</td>
             </tr>
+
             <tr>
               <td>Illustrating Ideas</td>
               <td>A. Mitchell</td>
+            </tr>
+            <tr>
+              <td>Intro to Illustration</td>
+              <td>J. Anderson</td>
+            </tr>
+            <tr>
+              <td>Liberal Arts Advanced Seminar</td>
+              <td>D. Pankonien</td>
             </tr>
             <tr>
               <td>User Experience Design</td>
               <td>M. Luken</td>
             </tr>
             <tr>
-              <td>Applied Arts and Designed Objects</td>
-              <td>G. Gasterland-Gustafsson</td>
-            </tr>
-            <tr>
               <td>Senior Project: Graphic Design</td>
               <td>J. Jancourt</td>
-            </tr>
-            <tr>
-              <td>Intro to Illustration</td>
-              <td>J. Anderson</td>
             </tr>
           </table>
         </Accordion>
