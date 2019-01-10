@@ -1,8 +1,63 @@
 .orientation-student-page {
-  counter-reset: section-counter;
+  .app-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    padding: 0;
+    a {
+      padding: 0.75rem 0;
+      margin: 0 1rem;
+      display: block;
+      color: var(--text-color);
+      border-bottom: 1px solid black;
+    }
+  }
 
+  main {
+    --sans-font: "Lato", sans-serif;
+    --slab-font: "Zilla Slab", serif;
+    font-family: var(--slab-font);
+    font-size: 24px;
+    counter-reset: section-counter;
+  }
+
+  h1,
+  h2 {
+    line-height: 1.1;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 6rem 0 2rem;
+    margin-bottom: -0.66 * 20rem;
+    background-color: #dff7fe;
+    .subtitle {
+      display: block;
+      font-size: 0.7em;
+    }
+    .hero-image {
+      display: block;
+      margin: auto;
+      width: 20rem;
+      max-width: 100%;
+    }
+  }
+
+  .section-intro {
+    background: white;
+    padding-top: 0.66 * 20rem - 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: var(--sans-font);
+    font-size: 2rem;
+  }
   h2:before {
+    display: block;
     counter-increment: section-counter;
-    content: counter(section-counter) ". ";
+    content: counter(section-counter);
   }
 }
