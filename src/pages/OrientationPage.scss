@@ -57,6 +57,7 @@
   }
 
   .section-interlude {
+    position: relative;
     background-image: linear-gradient(
       180deg,
       var(--green-light) 0%,
@@ -70,6 +71,16 @@
       width: 30rem;
       max-width: 100%;
       margin: auto;
+    }
+    .image-by {
+      font-family: var(--sans-font);
+      font-size: 0.8rem;
+      text-align: center;
+      color: #bbb;
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 

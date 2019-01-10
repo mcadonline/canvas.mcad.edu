@@ -16,6 +16,7 @@ export default () => (
     </header>
     <section className="section-interlude">
       <img src={turtleImg} alt="Dragon Turtle by Alex Mitchell" />
+      <p className="image-by">Illustration by Alex Mitchell, MFA '15</p>
     </section>
     <section className="section-intro">
       <div className="container">
@@ -170,12 +171,12 @@ export default () => (
               <td>D. Pankonien</td>
             </tr>
             <tr>
-              <td>User Experience Design</td>
-              <td>M. Luken</td>
-            </tr>
-            <tr>
               <td>Senior Project: Graphic Design</td>
               <td>J. Jancourt</td>
+            </tr>
+            <tr>
+              <td>User Experience Design</td>
+              <td>M. Luken</td>
             </tr>
           </table>
         </Accordion>
