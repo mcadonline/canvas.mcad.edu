@@ -8,7 +8,7 @@ export default props => (
   <Router>
     <Switch>
       <Route {...props} exact path="/" component={HomePage} />
-      <Route {...props} path="/orientation" component={OrientationPage} />
+      <Route {...props} path="/orientation*" component={OrientationPage} />
     </Switch>
   </Router>
 );
