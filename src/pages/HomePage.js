@@ -20,9 +20,12 @@ export default () => (
     <section>
       <div className="container grid">
         <article className="card">
-          <h2>New to Canvas?</h2>
+          <h2>Students</h2>
           <p>
-            Watch the <Link to="/orientation">Canvas Orientation</Link>
+            <Link to="/orientation">Watch the Canvas Orientation</Link>
+          </p>
+          <p>
+            <Link to="/books">Get Books for Your Online Course</Link>
           </p>
         </article>
       </div>

@@ -18,6 +18,16 @@
     h1 {
       margin-bottom: 3rem;
     }
+    figure img {
+      width: 25rem;
+    }
+    figcaption {
+      color: hsla(0, 0, 0, 0.25);
+      font-style: italic;
+    }
+    figcaption a {
+      color: hsla(244, 74%, 63%, 0.5);
+    }
   }
   .page-nav {
     background: var(--pink-light);

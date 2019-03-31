@@ -24,10 +24,22 @@ export default () => {
         <h1 className="container">
           Textbooks <span className="subtitle">for Online Courses</span>
         </h1>
-        <img
-          src={bookLoverSvg}
-          alt="Book Lover. Illustration of woman sitting on books reading with legs crossed."
-        />
+        <figure>
+          <img
+            src={bookLoverSvg}
+            alt="Book Lover. Illustration of woman sitting on books reading with legs crossed."
+          />
+          <figcaption>
+            Illustration by{" "}
+            <a
+              href="https://undraw.co/illustrations"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Katerina Limpitsouni
+            </a>
+          </figcaption>
+        </figure>
       </header>
       <nav className="page-nav">
         <div className="container">
