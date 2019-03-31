@@ -1,60 +1,11 @@
 .orientation-student-page {
-  --blue-light: #dff7fe;
-  --green-light: #ebffd4;
-  --yellow-light: #fbfedf;
-  --pink-light: #ffebfd;
-  --sans-font: "Lato", sans-serif;
-  --slab-font: "Zilla Slab", serif;
-
-  .container {
-    max-width: 45rem;
-    margin: 0 auto;
-  }
+  // --blue-light: #dff7fe;
+  // --green-light: #ebffd4;
+  // --yellow-light: #fbfedf;
+  // --pink-light: #ffebfd;
 
   main {
-    font-family: var(--slab-font);
     counter-reset: section-counter;
-  }
-
-  h1,
-  h2 {
-    line-height: 1.1;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  // MCAD X Online Learning
-  // with a rule underneath
-  .app-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: none;
-    padding: 0 1rem;
-    a {
-      padding: 0.75rem 0;
-      margin: auto;
-      max-width: 60rem;
-      display: block;
-      color: var(--text-color);
-      border-bottom: 1px solid black;
-    }
-  }
-
-  .page-title {
-    text-align: center;
-    padding: 6rem 0 0;
-    background-color: var(--green-light);
-    h1 {
-      font-size: 3.5rem;
-    }
-    .subtitle {
-      display: block;
-      font-size: 2rem;
-    }
   }
 
   .section-interlude {
@@ -92,7 +43,6 @@
 
   h2 {
     text-align: center;
-    font-family: var(--sans-font);
     font-size: 2rem;
   }
 
@@ -130,45 +80,7 @@
     );
   }
 
-  table {
-    font-family: var(--sans-font);
-    font-size: 1rem;
-    th {
-      text-align: left;
-      padding: 0.25rem 0.5rem;
-    }
-    td {
-      border-top: 1px solid #ccc;
-      padding: 0.5rem;
-    }
-    tr:last-child td {
-      border-bottom: 1px solid #ccc;
-    }
-  }
-
-  .accordion__contents {
-    font-family: var(--sans-font);
-    font-size: 1.25rem;
-  }
-
   ul {
-    padding: 1rem;
     font-size: 1.5rem;
-  }
-
-  .key-value-table {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    dt,
-    dd {
-      padding: 0.5rem;
-    }
-    dt {
-      color: #aaa;
-      text-align: right;
-    }
-    dd {
-      margin: 0;
-    }
   }
 }

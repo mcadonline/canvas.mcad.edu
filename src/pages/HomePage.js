@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DefaultLayout from "./DefaultLayout";
 
-import "./HomePage.css";
+import "./HomePage.scss";
 
 export default () => (
   <DefaultLayout className="home-page">

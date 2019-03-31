@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import AppHeader from "../components/AppHeader";
 
-import "./DefaultLayout.css";
+import "./DefaultLayout.scss";
 
 const DefaultLayout = ({ children, className }) => (
   <div className={`default-layout ${className}`}>

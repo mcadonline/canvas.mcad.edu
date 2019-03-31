@@ -5,7 +5,9 @@
 }
 
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --serif-font-family: "linotype-sabon", sans-serif;
+  --sans-font-family: "canada-type-gibson", sans-serif;
+  --font-family: var(--serif-font-family);
   --blue: #2773e2;
 }
 
@@ -17,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;

@@ -24,7 +24,8 @@ export default () => (
   <DefaultLayout className="orientation-student-page">
     <header className="page-title">
       <h1 className="container">
-        Canvas LMS <span className="subtitle">Student Orientation</span>
+        Using Canvas
+        <span className="subtitle">Student Orientation</span>
       </h1>
     </header>
     <section className="section-interlude">
@@ -38,8 +39,8 @@ export default () => (
 
         <p>
           Your course will be using a new Learning Management System, Canvas
-          LMS. It's similar to Blackboard, but many think it's more user
-          friendly.
+          LMS. It&rsquo;s similar to Blackboard, but many think it&rsquo;s more
+          user friendly.
         </p>
         <p>Here are some resources to help you get started.</p>
       </div>
@@ -80,8 +81,8 @@ export default () => (
           <Accordion.Content>
             <p>
               Since 2001, MCAD has used Blackboard as our Learning Management
-              System (LMS). Blackboard has been pretty good for MCAD, but it's
-              not perfect. Faculty and students have asked:{" "}
+              System (LMS). Blackboard has been pretty good for MCAD, but
+              it&rsquo;s not perfect. Faculty and students have asked:{" "}
               <em>Is there something better?</em>
             </p>
 
@@ -107,9 +108,9 @@ export default () => (
           </Accordion.Header>
           <Accordion.Content>
             <p>
-              No. If you're enrolled in multiple courses, you will be using{" "}
-              <a href="https://learn.mcad.edu">Blackboard</a> for your other
-              courses.
+              No. If you&rsquo;re enrolled in multiple courses, you will be
+              using <a href="https://learn.mcad.edu">Blackboard</a> for your
+              other courses.
             </p>
             <p>
               The courses that are participating in the Canvas LMS pilot are:
@@ -165,12 +166,12 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>What's my username?</Accordion.Header>
+          <Accordion.Header>What&rsquo;s my username?</Accordion.Header>
           <Accordion.Content>
             <p>
-              If you're enrolled in an online course, you should have received
-              an email with your username and your student ID number one week
-              before the course began.
+              If you&rsquo;re enrolled in an online course, you should have
+              received an email with your username and your student ID number
+              one week before the course began.
             </p>
             <p>
               Your username is usually the first initial + last name. For
@@ -193,7 +194,7 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>What's my password?</Accordion.Header>
+          <Accordion.Header>What&rsquo;s my password?</Accordion.Header>
           <Accordion.Content>
             <p>
               To set or reset your password, go to:{" "}
@@ -226,7 +227,8 @@ export default () => (
         </Accordion>
         <Accordion>
           <Accordion.Header>
-            I don't see my class on Canvas or Blackboard. When will it show up?
+            I don&rsquo;t see my class on Canvas or Blackboard. When will it
+            show up?
           </Accordion.Header>
           <Accordion.Content>
             <p>
@@ -247,8 +249,8 @@ export default () => (
           <AccordionContent>
             <p>Login. Read the Syllabus.</p>
             <p>
-              If you're in an online course, you'll have a <b>Start Here!</b>{" "}
-              section. Complete these tasks.
+              If you&rsquo;re in an online course, you&rsquo;ll have a{" "}
+              <b>Start Here!</b> section. Complete these tasks.
             </p>
             <p>
               All online courses also have a first day assignment of some kind –
@@ -261,7 +263,7 @@ export default () => (
         </Accordion>
         <Accordion>
           <Accordion.Header>
-            What's the workload in an online course?
+            What&rsquo;s the workload in an online course?
           </Accordion.Header>
           <Accordion.Content>
             <p>
@@ -318,8 +320,8 @@ export default () => (
       <div className="container">
         <h2 id="contact">Contact Online Learning</h2>
         <p>
-          Please contact us if you have any questions. We're always happy to
-          help!
+          Please contact us if you have any questions. We&rsquo;re always happy
+          to help!
         </p>
         <dl className="key-value-table">
           <dt>Email</dt>
