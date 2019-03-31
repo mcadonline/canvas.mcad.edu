@@ -1,11 +1,17 @@
 .orientation-student-page {
-  // --blue-light: #dff7fe;
-  // --green-light: #ebffd4;
-  // --yellow-light: #fbfedf;
-  // --pink-light: #ffebfd;
+  // COLORS
+  --blue-light: #dff7fe;
+  --green-light: #ebffd4;
+  --yellow-light: #fbfedf;
+  --pink-light: #ffebfd;
 
   main {
     counter-reset: section-counter;
+  }
+
+  .page-title {
+    background-color: var(--green-light);
+    padding-bottom: 0;
   }
 
   .section-interlude {

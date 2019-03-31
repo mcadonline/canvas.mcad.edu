@@ -1,20 +1,18 @@
 import React from "react";
 import Course from "./Course";
-
-function prettifyTerm(term) {
-  if (term === "FA") return "Fall";
-  if (term === "SP") return "Spring";
-  if (term === "SU") return "Summer";
-  return term;
-}
+import prettifyTerm from "../../lib/prettifyTerm";
 
 export default ({ term, year, courses }) => (
   <div className="course-list">
-    <h1 className="course-list__title">
-      {prettifyTerm(term)} {year}
-    </h1>
-    {courses.map(course => (
-      <Course key={course.courseId} course={course} />
-    ))}
+    <div className="container">
+      <h1 className="course-list__title" id={`${term}-${year}`}>
+        {prettifyTerm(term)} {year}
+      </h1>
+      <div className="course-list__contents">
+        {courses.map(course => (
+          <Course key={course.courseId} course={course} />
+        ))}
+      </div>
+    </div>
   </div>
 );

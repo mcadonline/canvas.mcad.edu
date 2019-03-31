@@ -10,15 +10,15 @@
     &:before {
       content: "▶";
       position: absolute;
-      top: 0.5em;
+      top: 0.33em;
       left: 0;
-      font-size: 1rem;
+      font-size: 0.66em;
     }
   }
   .accordion__content {
     display: none;
     padding-left: 1.5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
 

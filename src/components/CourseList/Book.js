@@ -1,10 +1,11 @@
 import React from "react";
 import "./Book.scss";
 
-function withLinkIfExists(Component, url) {
-  if (!url) return <Component />;
+function withLink(Component, { url, isbn13 }) {
+  const bestGuessUrl = `https://www.amazon.com/s?k=${isbn13}&language=en_US&tag=minneapcolleg-20`;
+
   return (
-    <a href={url}>
+    <a href={url || bestGuessUrl} rel="noopener noreferrer" target="_blank">
       <Component />
     </a>
   );
@@ -20,8 +21,6 @@ export default ({ book }) => {
   );
 
   return (
-    <li className="course-list__course-book">
-      {withLinkIfExists(BookName, storeUrl)}
-    </li>
+    <li className="book">{withLink(BookName, { url: storeUrl, isbn13 })}</li>
   );
 };

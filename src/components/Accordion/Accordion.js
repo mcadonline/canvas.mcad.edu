@@ -5,7 +5,7 @@ import AccordionContent from "./AccordionContent";
 
 import "./Accordion.scss";
 
-const Accordion = ({ isOpenByDefault = false, children, className }) => {
+const Accordion = ({ isOpenByDefault = false, children, className = "" }) => {
   const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
   return (

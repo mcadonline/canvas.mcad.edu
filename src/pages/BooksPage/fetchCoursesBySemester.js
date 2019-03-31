@@ -38,6 +38,14 @@ function byStartDate(term1, term2) {
   return startDate1 - startDate2;
 }
 
+function byCourseName(course1, course2) {
+  const name1 = course1.courseName;
+  const name2 = course2.courseName;
+  if (name1 < name2) return -1;
+  if (name2 > name1) return 1;
+  return 0;
+}
+
 export default async function fetchCoursesWithBooks(setCourses) {
   const courses = await fetch(`https://ol-support.mcad.edu/api/books`)
     .then(res => res.json())
@@ -48,7 +56,11 @@ export default async function fetchCoursesWithBooks(setCourses) {
   const termYearDict = groupBy(termYear, courses);
 
   const termYearArray = toArray(termYearDict);
+
   const sortedTermYearArray = termYearArray.sort(byStartDate);
 
-  return sortedTermYearArray;
+  return sortedTermYearArray.map(termYear => ({
+    ...termYear,
+    courses: termYear.courses.sort(byCourseName)
+  }));
 }

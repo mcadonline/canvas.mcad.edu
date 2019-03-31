@@ -1,2 +1,122 @@
-.books-page {
+.books-page main {
+  --blue-light: #b5abfd;
+  --pink-light: hsla(306, 100%, 96%, 0.45);
+  --yellow-light: #fffedb;
+  --blue: blue;
+  --small-font-size: 0.9rem;
+
+  font-family: var(--sans-font-family);
+
+  a {
+    color: var(--blue);
+  }
+
+  .page-title {
+    background: linear-gradient(var(--blue-light), var(--pink-light));
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+  .page-nav {
+    background: var(--pink-light);
+    text-align: center;
+    font-family: var(--sans-font-family);
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+  .page-nav__title,
+  .course-list__title {
+    margin: 0;
+    padding: 0.75rem 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    position: relative;
+    &:after {
+      content: "";
+      width: 2rem;
+      height: 1px;
+      background: #333;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+  .course-list__title {
+    text-align: center;
+    position: sticky;
+    top: -1px;
+  }
+
+  .page-section {
+    padding: 2rem 0;
+  }
+
+  .course-list:nth-of-type(even) {
+    background: var(--pink-light);
+  }
+
+  .accordion {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .accordion__header {
+    font-size: 1rem;
+  }
+  .accordion.is-open {
+    border-left: 0.25rem solid #333;
+    .course__title {
+      font-weight: bold;
+    }
+    .course__details {
+      color: #333;
+    }
+  }
+  .accordion {
+    border-left: 0.25rem solid transparent;
+  }
+
+  .course__title {
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 0.25em;
+  }
+  .course__details {
+    font-size: var(--small-font-size);
+    color: #999;
+    p {
+      margin: 0;
+    }
+  }
+  .book-list {
+    font-size: var(--small-font-size);
+    h2 {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: var(--small-font-size);
+      margin: 1em 0 0.5em;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .book {
+    margin: 0.5em 0;
+  }
+  .book__isbn {
+    display: block;
+  }
 }
