@@ -64,7 +64,7 @@ export default () => {
 
       {errorMessage && (
         <div className="error-message">
-          <container>
+          <div className="container">
             <h2>Oopsies!</h2>
             <pre>Error: {errorMessage}</pre>
             <p>
@@ -72,7 +72,7 @@ export default () => {
               this message repeatedly, please contact{" "}
               <a href="mailto:online@mcad.edu">online@mcad.edu</a>
             </p>
-          </container>
+          </div>
         </div>
       )}
 
