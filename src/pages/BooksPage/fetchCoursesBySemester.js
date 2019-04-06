@@ -49,7 +49,10 @@ function byCourseName(course1, course2) {
 export default async function fetchCoursesWithBooks(setCourses) {
   const courses = await fetch(`https://ol-support.mcad.edu/api/books`)
     .then(res => res.json())
-    .catch(console.error);
+    .catch(err => {
+      console.error(err.message);
+      throw err;
+    });
 
   const termYear = ({ term, year }) => `${term} ${year}`;
 

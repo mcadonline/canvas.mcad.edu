@@ -9,11 +9,16 @@ import "./BooksPage.scss";
 
 export default () => {
   const [coursesByTermYear, setCoursesByTermYear] = useState([]);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetchCoursesBySemester();
-      setCoursesByTermYear(data);
+      try {
+        const data = await fetchCoursesBySemester();
+        setCoursesByTermYear(data);
+      } catch (err) {
+        setErrorMessage(err.message);
+      }
     }
     fetchData();
   }, []);
@@ -41,6 +46,7 @@ export default () => {
           </figcaption>
         </figure>
       </header>
+
       <nav className="page-nav">
         <div className="container">
           <h2 className="page-nav__title">Semester</h2>
@@ -55,6 +61,20 @@ export default () => {
           </ul>
         </div>
       </nav>
+
+      {errorMessage && (
+        <div className="error-message">
+          <container>
+            <h2>Oopsies!</h2>
+            <pre>Error: {errorMessage}</pre>
+            <p>
+              Something went wrong. Try clicking the Refresh Button. If you get
+              this message repeatedly, please contact{" "}
+              <a href="mailto:online@mcad.edu">online@mcad.edu</a>
+            </p>
+          </container>
+        </div>
+      )}
 
       <section className="page-section">
         {coursesByTermYear.map(({ term, year, courses }) => (
