@@ -100,6 +100,7 @@ export default () => {
             label="Course Filter"
             placeholder="Filter by Course Name"
             icon="search"
+            value={searchFilter}
           />
         </div>
       </div>
