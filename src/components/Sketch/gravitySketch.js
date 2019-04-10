@@ -46,7 +46,7 @@ export default function sketch(s) {
     });
 
     // prevent default
-    return false;
+    // return false;
   };
 
   s.keyPressed = function() {
