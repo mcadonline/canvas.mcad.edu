@@ -76,4 +76,11 @@
   .card a {
     text-decoration: none;
   }
+
+  #p5-sketch-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
 }

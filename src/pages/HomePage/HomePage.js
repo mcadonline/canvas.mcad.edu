@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DefaultLayout from "./DefaultLayout";
+import DefaultLayout from "../DefaultLayout";
+import Sketch from "../../components/Sketch/Sketch";
 
 import "./HomePage.scss";
 
@@ -30,5 +31,6 @@ export default () => (
         </article>
       </div>
     </section>
+    <Sketch className="bg-sketch" />
   </DefaultLayout>
 );
