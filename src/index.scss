@@ -1,0 +1,138 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --serif-font-family: "linotype-sabon", sans-serif;
+  --sans-font-family: "canada-type-gibson", sans-serif;
+  --font-family: var(--serif-font-family);
+  --blue: #2773e2;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+a {
+  color: var(--blue);
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--sans-font-family);
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  font-size: 1rem;
+  font-family: var(--sans-font-family);
+  th {
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+  }
+  td {
+    border-top: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+  tr:last-child td {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+// title area at the top
+// should always have a background color
+// and image
+.page-title {
+  text-align: center;
+  padding: 6rem 0 4rem;
+  background-color: #eee;
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    margin-top: 0.25em;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.key-value-table {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  dt,
+  dd {
+    padding: 0.5rem;
+  }
+  dt {
+    color: #aaa;
+    text-align: right;
+  }
+  dd {
+    margin: 0;
+  }
+}
+
+.app-footer {
+  font-family: "Helvetica Neue", sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+}

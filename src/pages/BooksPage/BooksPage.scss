@@ -1,13 +1,14 @@
-.books-page main {
+.books-page {
   --blue-light: #b5abfd;
-  --pink-light: hsla(306, 100%, 96%, 0.45);
+  --pink-light: #fff2ff;
   --yellow-light: #fffedb;
   --blue: blue;
   --small-font-size: 0.9rem;
+  --purple-dark: #27244b;
 
   font-family: var(--sans-font-family);
 
-  a {
+  main a {
     color: var(--blue);
   }
 
@@ -41,6 +42,25 @@
       margin: 0.5rem 0;
     }
   }
+
+  .search-bar {
+    background: var(--pink-light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .input-group {
+      background: white;
+      max-width: 100%;
+      border: none;
+      padding: 0.5rem;
+      border: 1px solid var(--blue-light);
+    }
+    .input-group.is-active {
+      border: 1px solid var(--purple-dark);
+    }
+  }
+
   .page-nav__title,
   .course-list__title {
     margin: 0;
@@ -65,7 +85,7 @@
   .course-list__title {
     text-align: center;
     position: sticky;
-    top: -1px;
+    top: 5rem;
   }
 
   .page-section {

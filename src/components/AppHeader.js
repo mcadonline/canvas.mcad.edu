@@ -6,8 +6,10 @@ import "./AppHeader.scss";
 
 export default ({ name = "Online Learning" }) => (
   <header className="app-header">
-    <Link to="/">
-      MCAD <img className="logo" src={logo} alt="X" /> {name}
-    </Link>
+    <div className="container">
+      <Link to="/">
+        MCAD <img className="logo" src={logo} alt="X" /> {name}
+      </Link>
+    </div>
   </header>
 );

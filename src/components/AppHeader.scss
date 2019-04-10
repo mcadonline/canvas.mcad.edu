@@ -8,19 +8,21 @@
   left: 0;
   width: 100%;
 
-  a {
-    padding: 0.75rem 0;
-    margin: auto;
-    max-width: 60rem;
-    display: block;
-    color: var(--text-color);
+  .container {
     border-bottom: 1px solid black;
+    position: relative;
   }
-  h1 {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
+
+  .app-header__left {
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
   }
+
+  a {
+    color: var(--text-color);
+  }
+
   .logo {
     max-height: 0.75rem;
     display: inline-block;

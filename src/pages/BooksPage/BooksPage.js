@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import fetchCoursesBySemester from "./fetchCoursesBySemester";
 import DefaultLayout from "../DefaultLayout";
 import CourseList from "../../components/CourseList/CourseList";
+import InputGroup from "../../components/InputGroup";
 import bookLoverSvg from "../../img/undraw_book_lover_mkck.svg";
 import prettifyTerm from "../../lib/prettifyTerm";
 
@@ -10,6 +11,7 @@ import "./BooksPage.scss";
 export default () => {
   const [coursesByTermYear, setCoursesByTermYear] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [searchFilter, setSearchFilter] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -22,6 +24,35 @@ export default () => {
     }
     fetchData();
   }, []);
+
+  function handleSearchFilterChange(e) {
+    e.preventDefault();
+    setSearchFilter(e.target.value);
+  }
+
+  const bySearchTerm = searchTerm => ({
+    courseCode,
+    courseName,
+    instructor
+  }) => {
+    const lowercaseSearchTerm = searchTerm.toLowerCase();
+    const instructorFirstName =
+      instructor.preferredName || instructor.firstName;
+    return (
+      courseCode.toLowerCase().includes(lowercaseSearchTerm) ||
+      courseName.toLowerCase().includes(lowercaseSearchTerm) ||
+      instructorFirstName.toLowerCase().includes(lowercaseSearchTerm) ||
+      instructor.lastName.toLowerCase().includes(lowercaseSearchTerm)
+    );
+  };
+
+  const filteredCoursesByTermYear = coursesByTermYear.map(
+    ({ term, year, courses }) => ({
+      term,
+      year,
+      courses: courses.filter(bySearchTerm(searchFilter))
+    })
+  );
 
   return (
     <DefaultLayout className="books-page">
@@ -62,6 +93,17 @@ export default () => {
         </div>
       </nav>
 
+      <div className="search-bar">
+        <div className="container">
+          <InputGroup
+            onChange={handleSearchFilterChange}
+            label="Course Filter"
+            placeholder="Filter by Course Name"
+            icon="search"
+          />
+        </div>
+      </div>
+
       {errorMessage && (
         <div className="error-message">
           <div className="container">
@@ -77,7 +119,7 @@ export default () => {
       )}
 
       <section className="page-section">
-        {coursesByTermYear.map(({ term, year, courses }) => (
+        {filteredCoursesByTermYear.map(({ term, year, courses }) => (
           <CourseList
             key={`${term}-${year}`}
             term={term}
