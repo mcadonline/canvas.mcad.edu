@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DefaultLayout from "../DefaultLayout";
-import Sketch from "../../components/Sketch";
+import Sketch from "../../components/Sketch/Sketch";
 
 import "./HomePage.scss";
 
