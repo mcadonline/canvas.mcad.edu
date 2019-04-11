@@ -98,23 +98,19 @@
 
   .accordion {
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .accordion__header {
     font-size: 1rem;
   }
   .accordion.is-open {
-    border-left: 0.25rem solid #333;
     .course__title {
       font-weight: bold;
     }
     .course__details {
       color: #333;
     }
-  }
-  .accordion {
-    border-left: 0.25rem solid transparent;
   }
 
   .course__title {

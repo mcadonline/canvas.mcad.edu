@@ -1,4 +1,5 @@
 import React from "react";
+import { partition } from "ramda";
 import Accordion from "../Accordion/Accordion";
 import Book from "./Book";
 import prettifyDate from "../../lib/prettifyDate";
@@ -8,11 +9,11 @@ function getFullName(instructor) {
   return `${preferredName || firstName} ${lastName}`;
 }
 
-const BookList = ({ books }) => {
+const BookList = ({ books, title }) => {
   if (!books) return "";
   return (
     <section className="book-list">
-      <h2>Required Textbooks</h2>
+      <h2>{title}</h2>
       <ul>
         {books.map(book => (
           <Book key={book.isbn13} book={book} />
@@ -31,6 +32,12 @@ export default ({ course }) => {
     instructor,
     books
   } = course;
+
+  const [requiredBooks, optionalBooks] = partition(
+    book => book.isRequired,
+    books
+  );
+
   return (
     <Accordion className="course">
       <Accordion.Header>
@@ -45,7 +52,17 @@ export default ({ course }) => {
         </section>
       </Accordion.Header>
       <Accordion.Content>
-        <BookList books={books} />
+        {requiredBooks.length ? (
+          <BookList books={requiredBooks} title="Required" />
+        ) : (
+          ""
+        )}
+        {optionalBooks.length ? (
+          <BookList books={optionalBooks} title="Optional" />
+        ) : (
+          ""
+        )}
+        {!books.length ? <p>No Required Textbooks</p> : ""}
       </Accordion.Content>
     </Accordion>
   );
