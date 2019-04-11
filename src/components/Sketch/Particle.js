@@ -20,7 +20,7 @@ export default class Particle {
       sketch: null,
       velocity: new p5.Vector(0, 0),
       color: [127],
-      radius: 10
+      radius: 3
     };
 
     config = Object.assign({}, defaults, config);

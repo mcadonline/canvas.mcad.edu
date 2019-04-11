@@ -8,7 +8,7 @@ export default function sketch(s) {
   s.setup = function() {
     s.createCanvas(window.innerWidth, window.innerHeight);
 
-    s.background(0);
+    s.background(255);
     s.noStroke();
 
     particleSys = new ParticleSystem({ sketch: s });
@@ -21,28 +21,32 @@ export default function sketch(s) {
           getRandomInt(0, window.innerHeight)
         ),
         color: [
-          getRandomInt(0, 255),
-          getRandomInt(0, 255),
-          getRandomInt(0, 255)
+          getRandomInt(220, 255),
+          getRandomInt(220, 255),
+          getRandomInt(220, 255)
         ]
       });
     }
   };
 
   s.draw = function() {
-    s.background(255);
+    // s.background(255);
     particleSys.update().render();
 
-    s.push();
-    s.fill(100);
-    s.ellipse(s.mouseX, s.mouseY, 10, 10);
-    s.pop();
+    // s.push();
+    // s.fill(100);
+    // s.ellipse(s.mouseX, s.mouseY, 10, 10);
+    // s.pop();
   };
 
   s.mousePressed = function() {
     particleSys.add({
       position: new p5.Vector(s.mouseX, s.mouseY),
-      color: [getRandomInt(0, 255), getRandomInt(0, 255), getRandomInt(0, 255)]
+      color: [
+        getRandomInt(100, 255),
+        getRandomInt(100, 255),
+        getRandomInt(100, 255)
+      ]
     });
 
     // prevent default
