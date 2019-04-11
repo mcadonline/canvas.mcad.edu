@@ -92,6 +92,11 @@ table {
   }
 }
 
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
 // title area at the top
 // should always have a background color
 // and image
@@ -131,8 +136,10 @@ table {
 
 .app-footer {
   font-family: "Helvetica Neue", sans-serif;
-  background: #111;
-  color: #fff;
+  color: #111;
   text-align: center;
   flex-shrink: 0;
+  .container {
+    border-top: 1px solid #111;
+  }
 }
