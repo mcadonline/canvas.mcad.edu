@@ -34,7 +34,8 @@ export default ({ course }) => {
   } = course;
 
   const [requiredBooks, optionalBooks] = partition(
-    book => book.isRequired,
+    // if isRequired field doesn't exist on book, assume it is required
+    book => book.isRequired === undefined || book.isRequired,
     books
   );
 
