@@ -136,10 +136,8 @@ canvas {
 
 .app-footer {
   font-family: "Helvetica Neue", sans-serif;
-  color: #111;
+  background: #111;
+  color: #ccc;
   text-align: center;
   flex-shrink: 0;
-  .container {
-    border-top: 1px solid #111;
-  }
 }
