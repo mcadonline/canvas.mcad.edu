@@ -122,33 +122,16 @@ export default () => (
                   <th>Faculty</th>
                 </tr>
                 <tr>
-                  <td>Applied Arts and Designed Objects</td>
-                  <td>G. Gasterland-Gustafsson</td>
-                </tr>
-                <tr>
-                  <td>Creative Leadership</td>
-                  <td>A. Nowak</td>
-                </tr>
-
-                <tr>
-                  <td>Illustrating Ideas</td>
-                  <td>A. Mitchell</td>
-                </tr>
-                <tr>
-                  <td>Intro to Illustration</td>
-                  <td>J. Anderson</td>
-                </tr>
-                <tr>
                   <td>Liberal Arts Advanced Seminar</td>
                   <td>D. Pankonien</td>
                 </tr>
                 <tr>
-                  <td>Senior Project: Graphic Design</td>
-                  <td>J. Jancourt</td>
+                  <td>Capstone</td>
+                  <td>L. Smith</td>
                 </tr>
                 <tr>
-                  <td>User Experience Design</td>
-                  <td>M. Luken</td>
+                  <td>Digital Presence Workshop</td>
+                  <td>H. Miller</td>
                 </tr>
               </tbody>
             </table>
@@ -233,8 +216,8 @@ export default () => (
           <Accordion.Content>
             <p>
               Courses open to students the Sunday before the official start
-              date. So if your course begins Tue, Jan 22, the course would open
-              at <b>12:01am on Sun, Jan 20</b>.
+              date. So if your course begins Mon, Jun 3, the course would open
+              at <b>12:01am on Sun, Jun 2</b>.
             </p>
             <p>
               Students in online courses will receive an email notification when
@@ -247,7 +230,8 @@ export default () => (
             What do I do on the first day of my online class?
           </Accordion.Header>
           <AccordionContent>
-            <p>Login. Read the Syllabus.</p>
+            <p>Login.</p>
+            <p>Read the Syllabus.</p>
             <p>
               If you&rsquo;re in an online course, you&rsquo;ll have a{" "}
               <b>Start Here!</b> section. Complete these tasks.
