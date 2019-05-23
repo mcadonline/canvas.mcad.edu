@@ -22,6 +22,10 @@ const overviewVideos = [
     src: "https://player.vimeo.com/video/78015141?title=0&byline=0&portrait=0"
   },
   {
+    title: "Creating a Video",
+    src: "https://www.youtube.com/embed/gbtfF8swsUE"
+  },
+  {
     title: "The Canvas Student App",
     src: "https://player.vimeo.com/video/76565011?title=0&byline=0&portrait=0",
     description: (
