@@ -129,10 +129,6 @@ export default () => (
                   <td>Capstone</td>
                   <td>L. Smith</td>
                 </tr>
-                <tr>
-                  <td>Digital Presence Workshop</td>
-                  <td>H. Miller</td>
-                </tr>
               </tbody>
             </table>
           </Accordion.Content>
