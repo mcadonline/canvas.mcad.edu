@@ -1,6 +1,6 @@
 import React from "react";
 import { partition } from "ramda";
-import Accordion from "../Accordion/Accordion";
+import Accordion from "../Accordion";
 import Book from "./Book";
 import prettifyDate from "../../lib/prettifyDate";
 

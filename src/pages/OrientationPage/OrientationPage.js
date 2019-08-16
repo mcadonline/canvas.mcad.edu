@@ -2,12 +2,12 @@ import React from "react";
 import DefaultLayout from "../DefaultLayout";
 import Tip from "../../components/Tip";
 import Video from "../../components/Video";
-import turtleImg from "../../img/dragon-turtle-amitchell.png";
-import Accordion from "../../components/Accordion/Accordion";
+import Accordion from "../../components/Accordion";
 import overviewVideos from "./overviewVideos";
+import canvasCourses from "./canvasCourses";
 
+import turtleImg from "../../img/dragon-turtle-amitchell.png";
 import "./OrientationPage.scss";
-import AccordionContent from "../../components/Accordion/AccordionContent";
 
 const renderVideoAccordions = videos =>
   videos.map(({ title, src, description }) => (
@@ -19,6 +19,14 @@ const renderVideoAccordions = videos =>
       </Accordion.Content>
     </Accordion>
   ));
+
+const TableRow = ({ data }) => (
+  <tr>
+    {Object.values(data).map(val => (
+      <td>{val}</td>
+    ))}
+  </tr>
+);
 
 export default () => (
   <DefaultLayout className="orientation-student-page">
@@ -113,22 +121,14 @@ export default () => (
               other courses.
             </p>
             <p>
-              The courses that are participating in the Canvas LMS pilot are:
+              The courses that are participating in the Canvas LMS pilot this
+              semester are:
             </p>
             <table>
               <tbody>
-                <tr>
-                  <th>Course</th>
-                  <th>Faculty</th>
-                </tr>
-                <tr>
-                  <td>Liberal Arts Advanced Seminar</td>
-                  <td>D. Pankonien</td>
-                </tr>
-                <tr>
-                  <td>Capstone</td>
-                  <td>L. Smith</td>
-                </tr>
+                {canvasCourses.map(course => (
+                  <TableRow data={course} />
+                ))}
               </tbody>
             </table>
           </Accordion.Content>
@@ -225,7 +225,7 @@ export default () => (
           <Accordion.Header>
             What do I do on the first day of my online class?
           </Accordion.Header>
-          <AccordionContent>
+          <Accordion.Content>
             <p>Login.</p>
             <p>Read the Syllabus.</p>
             <p>
@@ -239,7 +239,7 @@ export default () => (
               class.Be sure to complete this and ask questions if you run into
               technical problems.
             </p>
-          </AccordionContent>
+          </Accordion.Content>
         </Accordion>
         <Accordion>
           <Accordion.Header>
