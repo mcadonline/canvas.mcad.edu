@@ -102,10 +102,7 @@ export default () => (
 
             <p>
               This semester MCAD is piloting Canvas with a small cohort of
-              faculty and students – including you! We want to know what you
-              think. Later in the semester we will survey you and your
-              instructor about your experiences. Your feedback will help decide
-              what LMS MCAD uses in the future.
+              faculty and students – including you!
             </p>
           </Accordion.Content>
         </Accordion>
@@ -116,9 +113,8 @@ export default () => (
           </Accordion.Header>
           <Accordion.Content>
             <p>
-              No. If you&rsquo;re enrolled in multiple courses, you will be
-              using <a href="https://learn.mcad.edu">Blackboard</a> for your
-              other courses.
+              No. If you&rsquo;re enrolled in multiple courses, you may be using{" "}
+              <a href="https://learn.mcad.edu">Blackboard</a> as well.
             </p>
             <p>
               The courses that are participating in the Canvas LMS pilot this
@@ -193,15 +189,24 @@ export default () => (
           </Accordion.Header>
           <Accordion.Content>
             <p>
-              You can find your required textbook information at the{" "}
+              Required textbook information can be found at{" "}
               <a
-                href="https://intranet.mcad.edu/department/art-cellar-and-bookstore"
+                href="https://canvas.mcad.edu/books"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                MCAD Art Cellar and Bookstore
+                canvas.mcad.edu/books
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://my.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                my.mcad.edu
               </a>
             </p>
+            <p />
           </Accordion.Content>
         </Accordion>
         <Accordion>
@@ -212,8 +217,7 @@ export default () => (
           <Accordion.Content>
             <p>
               Courses open to students the Sunday before the official start
-              date. So if your course begins Mon, Jun 3, the course would open
-              at <b>12:01am on Sun, Jun 2</b>.
+              date. You will NOT see your course in canvas before it opens.
             </p>
             <p>
               Students in online courses will receive an email notification when
