@@ -46,8 +46,8 @@ function byCourseName(course1, course2) {
   return 0;
 }
 
-export default async function fetchCoursesWithBooks(setCourses) {
-  const courses = await fetch(`https://ol-support.mcad.edu/api/books`)
+export default async function fetchCourses() {
+  const courses = await fetch(`https://ol-support.mcad.edu/api/courses`)
     .then(res => res.json())
     .catch(err => {
       console.error(err.message);

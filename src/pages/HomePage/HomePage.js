@@ -26,7 +26,7 @@ export default () => (
             <Link to="/orientation">Watch the Canvas Orientation</Link>
           </p>
           <p>
-            <Link to="/books">Get Books for Your Online Course</Link>
+            <Link to="/class-schedule">MCAD Class Schedule and Book List</Link>
           </p>
         </article>
       </div>

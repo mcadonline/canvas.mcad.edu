@@ -1,7 +1,7 @@
-.books-page {
+.class-list-page {
   --blue-light: #b5abfd;
-  --pink-light: #fff2ff;
   --yellow-light: #fffedb;
+  --orange-light: #ffeae6;
   --blue: blue;
   --small-font-size: 0.9rem;
   --purple-dark: #27244b;
@@ -13,7 +13,7 @@
   }
 
   .page-title {
-    background: linear-gradient(var(--blue-light), var(--pink-light));
+    background: linear-gradient(var(--orange-light), #fff);
     margin-bottom: 0;
     padding-bottom: 2rem;
     h1 {
@@ -27,11 +27,11 @@
       font-style: italic;
     }
     figcaption a {
-      color: hsla(244, 74%, 63%, 0.5);
+      color: hsla(244, 100%, 50%, 0.5);
     }
   }
   .page-nav {
-    background: var(--pink-light);
+    background: #fff;
     text-align: center;
     font-family: var(--sans-font-family);
     ul {
@@ -44,7 +44,6 @@
   }
 
   .search-bar {
-    background: var(--pink-light);
     position: sticky;
     top: 0;
     left: 0;
@@ -54,7 +53,7 @@
       max-width: 100%;
       border: none;
       padding: 0.5rem;
-      border: 1px solid var(--blue-light);
+      border: 1px solid #333;
     }
     .input-group.is-active {
       border: 1px solid var(--purple-dark);
@@ -125,13 +124,18 @@
       margin: 0;
     }
   }
-  .book-list {
+
+  h2,
+  .course__subtitle {
+    text-transform: uppercase;
+    font-weight: normal;
     font-size: var(--small-font-size);
+    margin: 1em 0 0.5em;
+  }
+
+  ul {
     h2 {
-      text-transform: uppercase;
-      font-weight: normal;
-      font-size: var(--small-font-size);
-      margin: 1em 0 0.5em;
+      @extend .course__subtitle;
     }
     ul {
       list-style: none;

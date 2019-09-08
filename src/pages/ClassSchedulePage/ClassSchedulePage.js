@@ -3,10 +3,10 @@ import fetchCoursesBySemester from "./fetchCoursesBySemester";
 import DefaultLayout from "../DefaultLayout";
 import CourseList from "../../components/CourseList/CourseList";
 import InputGroup from "../../components/InputGroup";
-import bookLoverSvg from "../../img/undraw_book_lover_mkck.svg";
+import heroImg from "../../img/undraw_designer_life_w96d.svg";
 import prettifyTerm from "../../lib/prettifyTerm";
 
-import "./BooksPage.scss";
+import "./ClassSchedulePage.scss";
 
 export default () => {
   const [coursesByTermYear, setCoursesByTermYear] = useState([]);
@@ -30,14 +30,18 @@ export default () => {
     setSearchFilter(e.target.value);
   }
 
-  const bySearchTerm = searchTerm => ({ courseCode, name, instructor }) => {
+  const bySearchTerm = searchTerm => ({
+    courseCode,
+    name,
+    instructor,
+    isOnlineCourse
+  }) => {
     const lowercaseSearchTerm = searchTerm.toLowerCase();
-    const instructorFirstName =
-      instructor.preferredName || instructor.firstName;
     return (
+      (["online"].includes(lowercaseSearchTerm) && isOnlineCourse) ||
       courseCode.toLowerCase().includes(lowercaseSearchTerm) ||
       name.toLowerCase().includes(lowercaseSearchTerm) ||
-      instructorFirstName.toLowerCase().includes(lowercaseSearchTerm) ||
+      instructor.firstName.toLowerCase().includes(lowercaseSearchTerm) ||
       instructor.lastName.toLowerCase().includes(lowercaseSearchTerm)
     );
   };
@@ -51,16 +55,13 @@ export default () => {
   );
 
   return (
-    <DefaultLayout className="books-page">
+    <DefaultLayout className="class-list-page">
       <header className="page-title">
         <h1 className="container">
-          Textbooks <span className="subtitle">for Online Courses</span>
+          Class Schedule <span className="subtitle">and Book List</span>
         </h1>
         <figure>
-          <img
-            src={bookLoverSvg}
-            alt="Book Lover. Illustration of woman sitting on books reading with legs crossed."
-          />
+          <img src={heroImg} alt="Life of a Digital Learner" />
           <figcaption>
             Illustration by{" "}
             <a

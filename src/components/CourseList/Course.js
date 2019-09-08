@@ -23,14 +23,51 @@ const BookList = ({ books, title }) => {
   );
 };
 
+function getLongDay(shortDayCodes) {
+  const lookup = {
+    M: "Monday",
+    T: "Tuesday",
+    W: "Wednesday",
+    R: "Thursday",
+    F: "Friday",
+    S: "Saturday",
+    U: "Sunday"
+  };
+  if (!shortDayCodes) return "Asynchronous";
+
+  return shortDayCodes
+    .split("")
+    .map(char => lookup[char])
+    .join(", ");
+}
+
+const Meeting = ({ location, days, startTime, endTime, isOnlineCourse }) => (
+  <li>
+    {getLongDay(days)}
+    {startTime && endTime ? ` ${startTime}–${endTime}, ` : " "}
+    {location === "WEB OL" ? "Online Course" : location}
+  </li>
+);
+
+const MeetingList = ({ meetings }) => (
+  <ul class="meeting-list">
+    {meetings.map(m => (
+      <Meeting {...m} />
+    ))}
+  </ul>
+);
+
 export default ({ course }) => {
   const {
     name,
     courseCode,
     startDate,
     endDate,
+    description,
     instructor,
-    books
+    books,
+    meetings,
+    isOnlineCourse
   } = course;
 
   const [requiredBooks, optionalBooks] = partition(
@@ -42,7 +79,9 @@ export default ({ course }) => {
   return (
     <Accordion className="course">
       <Accordion.Header>
-        <h1 className="course__title">{name}</h1>
+        <h1 className="course__title">
+          {name} {isOnlineCourse && "(Online)"}
+        </h1>
         <section className="course__details">
           <p>
             {courseCode} • {getFullName(instructor)}
@@ -53,17 +92,33 @@ export default ({ course }) => {
         </section>
       </Accordion.Header>
       <Accordion.Content>
+        <h2>Description</h2>
+        <p>{description || "NA"}</p>
+
+        <h2>Class Meetings</h2>
+
+        <MeetingList meetings={meetings} />
+
         {requiredBooks.length ? (
-          <BookList books={requiredBooks} title="Required" />
+          <BookList books={requiredBooks} title="Required Textbooks" />
         ) : (
           ""
         )}
         {optionalBooks.length ? (
-          <BookList books={optionalBooks} title="Optional" />
+          <BookList books={optionalBooks} title="Optional Textbooks" />
         ) : (
           ""
         )}
-        {!books.length ? <p>No Required Textbooks</p> : ""}
+        {!books.length ? (
+          <>
+            <h2>Required Textbooks</h2>
+            <ul>
+              <li>None</li>
+            </ul>
+          </>
+        ) : (
+          ""
+        )}
       </Accordion.Content>
     </Accordion>
   );
