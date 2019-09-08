@@ -30,17 +30,13 @@ export default () => {
     setSearchFilter(e.target.value);
   }
 
-  const bySearchTerm = searchTerm => ({
-    courseCode,
-    courseName,
-    instructor
-  }) => {
+  const bySearchTerm = searchTerm => ({ courseCode, name, instructor }) => {
     const lowercaseSearchTerm = searchTerm.toLowerCase();
     const instructorFirstName =
       instructor.preferredName || instructor.firstName;
     return (
       courseCode.toLowerCase().includes(lowercaseSearchTerm) ||
-      courseName.toLowerCase().includes(lowercaseSearchTerm) ||
+      name.toLowerCase().includes(lowercaseSearchTerm) ||
       instructorFirstName.toLowerCase().includes(lowercaseSearchTerm) ||
       instructor.lastName.toLowerCase().includes(lowercaseSearchTerm)
     );

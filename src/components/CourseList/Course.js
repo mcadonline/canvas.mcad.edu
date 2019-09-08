@@ -25,7 +25,7 @@ const BookList = ({ books, title }) => {
 
 export default ({ course }) => {
   const {
-    courseName,
+    name,
     courseCode,
     startDate,
     endDate,
@@ -42,7 +42,7 @@ export default ({ course }) => {
   return (
     <Accordion className="course">
       <Accordion.Header>
-        <h1 className="course__title">{courseName}</h1>
+        <h1 className="course__title">{name}</h1>
         <section className="course__details">
           <p>
             {courseCode} • {getFullName(instructor)}
