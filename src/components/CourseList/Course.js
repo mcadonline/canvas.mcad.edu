@@ -92,8 +92,7 @@ export default ({ course }) => {
         </section>
       </Accordion.Header>
       <Accordion.Content>
-        <h2>Description</h2>
-        <p>{description || "NA"}</p>
+        {description ? <p>{description}</p> : ""}
 
         <h2>Class Meetings</h2>
 
