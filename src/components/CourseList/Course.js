@@ -50,9 +50,9 @@ const Meeting = ({ location, days, startTime, endTime, isOnlineCourse }) => (
 );
 
 const MeetingList = ({ meetings }) => (
-  <ul class="meeting-list">
+  <ul className="meeting-list">
     {meetings.map(m => (
-      <Meeting {...m} />
+      <Meeting key={[m.location, m.days, m.startTime].join("-")} {...m} />
     ))}
   </ul>
 );

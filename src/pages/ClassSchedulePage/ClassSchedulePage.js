@@ -8,6 +8,27 @@ import prettifyTerm from "../../lib/prettifyTerm";
 
 import "./ClassSchedulePage.scss";
 
+const withTextForSearching = course => {
+  const textForSearching = [
+    course.courseCode,
+    course.name,
+    course.instructor.firstName || "",
+    course.instructor.lastName || "",
+    course.isOnlineCourse ? "online" : ""
+  ]
+    .join("|")
+    .toLowerCase();
+  return {
+    ...course,
+    textForSearching
+  };
+};
+
+const bySearchTerm = searchTerm => ({ textForSearching }) => {
+  const lowercaseSearchTerm = searchTerm.toLowerCase();
+  return textForSearching.includes(lowercaseSearchTerm);
+};
+
 export default () => {
   const [coursesByTermYear, setCoursesByTermYear] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -17,7 +38,12 @@ export default () => {
     async function fetchData() {
       try {
         const data = await fetchCoursesBySemester();
-        setCoursesByTermYear(data);
+        const coursesWithTextForSearching = data.map(termYear => ({
+          ...termYear,
+          courses: termYear.courses.map(withTextForSearching)
+        }));
+
+        setCoursesByTermYear(coursesWithTextForSearching);
       } catch (err) {
         setErrorMessage(err.message);
       }
@@ -29,30 +55,6 @@ export default () => {
     e.preventDefault();
     setSearchFilter(e.target.value);
   }
-
-  const bySearchTerm = searchTerm => ({
-    courseCode,
-    name,
-    instructor,
-    isOnlineCourse
-  }) => {
-    const lowercaseSearchTerm = searchTerm.toLowerCase();
-    return (
-      (["online"].includes(lowercaseSearchTerm) && isOnlineCourse) ||
-      courseCode.toLowerCase().includes(lowercaseSearchTerm) ||
-      name.toLowerCase().includes(lowercaseSearchTerm) ||
-      instructor.firstName.toLowerCase().includes(lowercaseSearchTerm) ||
-      instructor.lastName.toLowerCase().includes(lowercaseSearchTerm)
-    );
-  };
-
-  const filteredCoursesByTermYear = coursesByTermYear.map(
-    ({ term, year, courses }) => ({
-      term,
-      year,
-      courses: courses.filter(bySearchTerm(searchFilter))
-    })
-  );
 
   return (
     <DefaultLayout className="class-list-page">
@@ -93,12 +95,20 @@ export default () => {
       <div className="search-bar">
         <div className="container">
           <InputGroup
+            className="search-bar__input"
             onChange={handleSearchFilterChange}
             label="Course Filter"
             placeholder="Filter by Course Name"
             icon="search"
             value={searchFilter}
           />
+          <button
+            className="search-bar__clear"
+            onClick={() => setSearchFilter("")}
+            aria-label="Clear Search Filter"
+          >
+            &times;
+          </button>
         </div>
       </div>
 
@@ -117,12 +127,12 @@ export default () => {
       )}
 
       <section className="page-section">
-        {filteredCoursesByTermYear.map(({ term, year, courses }) => (
+        {coursesByTermYear.map(({ term, year, courses }) => (
           <CourseList
             key={`${term}-${year}`}
             term={term}
             year={year}
-            courses={courses}
+            courses={courses.filter(bySearchTerm(searchFilter))}
           />
         ))}
       </section>

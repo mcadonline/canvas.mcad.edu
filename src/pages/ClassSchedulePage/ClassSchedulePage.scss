@@ -48,7 +48,11 @@
     top: 0;
     left: 0;
     z-index: 100;
+    .container {
+      display: flex;
+    }
     .input-group {
+      flex-grow: 1;
       background: white;
       max-width: 100%;
       border: none;
@@ -57,6 +61,20 @@
     }
     .input-group.is-active {
       border: 1px solid var(--purple-dark);
+    }
+    .search-bar__clear {
+      border: 1px solid var(--purple-dark);
+      border-left: none;
+      color: var(--purple-dark);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .search-bar__clear:hover {
+      background: var(--purple-dark);
+      color: white;
     }
   }
 
