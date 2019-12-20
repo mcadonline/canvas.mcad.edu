@@ -57,7 +57,11 @@ export default () => (
         <Tip>
           Do you prefer watching videos on 1.25x or 2x speed? If you use Chrome,
           you may want to download the{" "}
-          <a href="https://chrome.google.com/webstore/detail/vimeo-repeat-speed/noonakfaafcdaagngpjehilgegefdima">
+          <a
+            href="https://chrome.google.com/webstore/detail/vimeo-repeat-speed/noonakfaafcdaagngpjehilgegefdima"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Vimeo Repeat &amp; Speed Extension
           </a>{" "}
           to make your Vimeo video experience better!
@@ -81,7 +85,14 @@ export default () => (
           <Accordion.Content>
             <p>
               Canvas LMS is the website where you will be learning online. Go
-              to: <a href="https://canvas.mcad.edu">https://canvas.mcad.edu</a>{" "}
+              to:{" "}
+              <a
+                href="https://canvas.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://canvas.mcad.edu
+              </a>{" "}
               to login.
             </p>
           </Accordion.Content>
@@ -119,13 +130,39 @@ export default () => (
           <Accordion.Content>
             <p>
               To set or reset your password, go to:{" "}
-              <a href="https://password.mcad.edu">https://password.mcad.edu</a>
+              <a
+                href="https://password.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://password.mcad.edu
+              </a>
             </p>
             <p>
               Your MCAD password can be used to access a variety of websites:{" "}
-              <a href="https://canvas.mcad.edu">Canvas LMS</a>,{" "}
-              <a href="https://learn.mcad.edu">Blackboard</a>,{" "}
-              <a href="https://lynda.mcad.edu">Lynda.com</a>{" "}
+              <a
+                href="https://canvas.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Canvas LMS
+              </a>
+              ,{" "}
+              <a
+                href="https://learn.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blackboard
+              </a>
+              ,{" "}
+              <a
+                href="https://lynda.mcad.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lynda.com
+              </a>{" "}
             </p>
           </Accordion.Content>
         </Accordion>
@@ -185,7 +222,7 @@ export default () => (
               All online courses also have a first day assignment of some kind –
               typically a discussion post where you introduce yourself. This is
               often how your professor will take attendance on the first day of
-              class.Be sure to complete this and ask questions if you run into
+              class. Be sure to complete this and ask questions if you run into
               technical problems.
             </p>
           </Accordion.Content>
@@ -214,15 +251,33 @@ export default () => (
               </li>
               <li>
                 Canvas Support Hotline:{" "}
-                <a href="tel:18557444304">1 (855) 744-4304</a>
+                <a
+                  href="tel:18557444304"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  1 (855) 744-4304
+                </a>
               </li>
               <li>
                 Email MCAD Online Learning:{" "}
-                <a href="mailto:online@mcad.edu">online@mcad.edu</a>
+                <a
+                  href="mailto:online@mcad.edu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  online@mcad.edu
+                </a>
               </li>
               <li>
                 Call MCAD Online Learning:{" "}
-                <a href="tel:6128743618">(612) 874-3618</a>
+                <a
+                  href="tel:6128743618"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (612) 874-3618
+                </a>
               </li>
             </ul>
           </Accordion.Content>
@@ -244,13 +299,29 @@ export default () => (
             </a>
           </li>
           <li>
-            <a href="https://kb.mcad.edu">MCAD Knowledge Base</a>
+            <a
+              href="https://kb.mcad.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MCAD Knowledge Base
+            </a>
           </li>
           <li>
-            <a href="https://intranet.mcad.edu">MCAD Intranet</a>
+            <a
+              href="https://intranet.mcad.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MCAD Intranet
+            </a>
           </li>
           <li>
-            <a href="https://mcad.edu/about-mcad/academic-calendar">
+            <a
+              href="https://mcad.edu/about-mcad/academic-calendar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               MCAD Academic Calendar
             </a>
           </li>
@@ -268,12 +339,20 @@ export default () => (
         <dl className="key-value-table">
           <dt>Email</dt>
           <dd>
-            <a href="mailto:online@mcad.edu">online@mcad.edu</a>
+            <a
+              href="mailto:online@mcad.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              online@mcad.edu
+            </a>
           </dd>
 
           <dt>Phone</dt>
           <dd>
-            <a href="tel:6128743618">(612) 874-3618</a>
+            <a href="tel:6128743618" target="_blank" rel="noopener noreferrer">
+              (612) 874-3618
+            </a>
           </dd>
 
           <dt>Mail</dt>
