@@ -51,7 +51,7 @@ const createCourse = ([courseId, courseName, instructor]: string[]): Course => {
 
 // TODO: pull this data directly from Canvas
 export default [
-  ["GWD  7410 20", "Web Design", "Seth Ferris"],
+  ["SD 6500 20", "Fundamentals of Sustainable Design", "Deann Garcia"],
   ["CSDE 9478 20", "Motion Illustration", "Annelise Capossella"],
   ["GWD  7460 20", "UX Design", "Matthew Luken"],
   ["GWD  6610 20", "Web Development", "James Johnson"],
@@ -61,30 +61,16 @@ export default [
   ["SD   7010 20", "Sustainable Design Practicum", "Denise DeLuca"],
   ["SD   7021 20", "Graduate Sustainability Thesis Project 1", "Denise DeLuca"],
   ["SD   7022 20", "Graduate Sustainability Thesis Project 2", "Denise DeLuca"],
-  ["CSDE 9305 20", "Comic Art Crash Course", "Alex Mitchell"],
-  ["CSID 6631 20", "PHP and MySQL", "Ashby Utting"],
+  ["CSID 6631 20", "PHP and MySQL", "TBD"],
   ["HS   3317 20", "Myth, Ritual, and Symbolism", "Dawn Pankonien"],
   ["SD   6510 20", "Systems Thinking", "Curt McNamara"],
   ["VC   4207 20", "Graphic Design Essentials", "Erika Hutchings"],
-  ["CSID 6632 20", "Developing WordPress Themes", "Ashby Utting"],
-  ["CSMA 9342 20", "Game Mechanics", "Co O'Neill"],
+  ["CSID 6632 20", "Developing WordPress Themes", "TBD"],
   [
     "AH 2103 01",
     "Applied Arts and Designed Objects",
     "Gretchen Gasterland-Gustafsson"
-  ],
-  ["AH/HS 3862 01", "Bauhaus Design", "Gretchen Gasterland-Gustafsson"],
-  [
-    "CST 9570 20 F19",
-    "Portfolio Prep: Drawing for HS and Transfer Students",
-    "Yuta Uchida"
-  ],
-  [
-    "HS 5010 04",
-    "Liberal Arts Advanced Seminar",
-    "Gretchen Gasterland-Gustafsson"
-  ],
-  ["ILL 2000 01", "Intro to Illustration", "Jaime Anderson"]
+  ]
 ]
   .map(createCourse)
   .sort(courseBySection)

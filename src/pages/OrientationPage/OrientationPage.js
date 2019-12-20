@@ -4,7 +4,7 @@ import Tip from "../../components/Tip";
 import Video from "../../components/Video";
 import Accordion from "../../components/Accordion";
 import overviewVideos from "./overviewVideos";
-import canvasCourses from "./canvasCourses";
+// import canvasCourses from "./canvasCourses";
 
 import turtleImg from "../../img/dragon-turtle-amitchell.png";
 import "./OrientationPage.scss";
@@ -19,14 +19,6 @@ const renderVideoAccordions = videos =>
       </Accordion.Content>
     </Accordion>
   ));
-
-const TableRow = ({ data }) => (
-  <tr>
-    {Object.values(data).map(val => (
-      <td>{val}</td>
-    ))}
-  </tr>
-);
 
 export default () => (
   <DefaultLayout className="orientation-student-page">
@@ -43,14 +35,16 @@ export default () => (
     <section className="section-intro">
       <div className="container">
         <h2>Welcome.</h2>
-        <p>This semester some things are different. Some things are better.</p>
 
         <p>
-          Your course will be using a new Learning Management System, Canvas
-          LMS. It&rsquo;s similar to Blackboard, but many think it&rsquo;s more
-          user friendly.
+          This semester your course will be using a new Learning Management
+          System, Canvas LMS. It&rsquo;s similar to Blackboard (if you've used
+          that before), but many think it&rsquo;s more user friendly.
         </p>
-        <p>Here are some resources to help you get started.</p>
+
+        <p>
+          Before your first day of class, please review the resources below.
+        </p>
       </div>
     </section>
     <section className="page-section">
@@ -81,54 +75,6 @@ export default () => (
     <section className="page-section">
       <div className="container">
         <h2 id="tips-for-ol-students">Frequently Asked Questions</h2>
-
-        <Accordion>
-          <Accordion.Header>
-            What is this about? Why are we using Canvas LMS?
-          </Accordion.Header>
-          <Accordion.Content>
-            <p>
-              Since 2001, MCAD has used Blackboard as our Learning Management
-              System (LMS). Blackboard has been pretty good for MCAD, but
-              it&rsquo;s not perfect. Faculty and students have asked:{" "}
-              <em>Is there something better?</em>
-            </p>
-
-            <p>
-              Canvas is popular LMS with a reputation for being user friendly.
-              In the last few years many highed ed institutions have adopted
-              Canvas as their LMS.
-            </p>
-
-            <p>
-              This semester MCAD is piloting Canvas with a small cohort of
-              faculty and students – including you!
-            </p>
-          </Accordion.Content>
-        </Accordion>
-
-        <Accordion>
-          <Accordion.Header>
-            Will all of my courses use Canvas LMS this semester?
-          </Accordion.Header>
-          <Accordion.Content>
-            <p>
-              No. If you&rsquo;re enrolled in multiple courses, you may be using{" "}
-              <a href="https://learn.mcad.edu">Blackboard</a> as well.
-            </p>
-            <p>
-              The courses that are participating in the Canvas LMS pilot this
-              semester are:
-            </p>
-            <table>
-              <tbody>
-                {canvasCourses.map(course => (
-                  <TableRow data={course} />
-                ))}
-              </tbody>
-            </table>
-          </Accordion.Content>
-        </Accordion>
 
         <Accordion>
           <Accordion.Header>Where do I go to login to Canvas?</Accordion.Header>
@@ -185,7 +131,7 @@ export default () => (
         </Accordion>
         <Accordion>
           <Accordion.Header>
-            How do I buy books or supplies for my class?
+            What books or supplies are required for my class?
           </Accordion.Header>
           <Accordion.Content>
             <p>
