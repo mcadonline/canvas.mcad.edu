@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "(source .env && rsync -rzv build/ ${DEPLOY_USERNAME}@${DEPLOY_SERVER}:${DEPLOY_DIR})"
+    "deploy": "(source .env && rsync -rzv build/ ${DEPLOY_USERNAME}@${DEPLOY_SERVER}:${DEPLOY_DIR})",
+    "yolo": "npm run build && npm run deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
