@@ -157,8 +157,7 @@ export default () => (
         </Accordion>
         <Accordion>
           <Accordion.Header>
-            I don&rsquo;t see my class on Canvas or Blackboard. When will it
-            show up?
+            I don&rsquo;t see my class on Canvas. When will it show up?
           </Accordion.Header>
           <Accordion.Content>
             <p>
