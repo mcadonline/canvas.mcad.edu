@@ -1,6 +1,6 @@
 {
   "name": "canvas.mcad.edu",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.17",
@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "(source .env && rsync -rzv build/ ${DEPLOY_USERNAME}@${DEPLOY_SERVER}:${DEPLOY_DIR})"
   },
   "eslintConfig": {
     "extends": "react-app"
