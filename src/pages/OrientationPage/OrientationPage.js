@@ -207,12 +207,25 @@ export default () => (
           <Accordion.Content>
             <p>You bet!</p>
 
-            <p>
-              Just email <a href="mailto:online@mcad.edu">online@mcad.edu</a> or
-              give us a call <a href="tel:6128743618">(612) 874-3618</a>.
-            </p>
-
-            <p>Our normal business hours are 9am-5pm, M-F. </p>
+            <ul>
+              <li>
+                <a href="https://cases.canvaslms.com/liveagentchat?chattype=student">
+                  Chat with Canvas Support
+                </a>
+              </li>
+              <li>
+                Canvas Support Hotline:{" "}
+                <a href="tel:18557444304">1 (855) 744-4304</a>
+              </li>
+              <li>
+                Email MCAD Online Learning:{" "}
+                <a href="mailto:online@mcad.edu">online@mcad.edu</a>
+              </li>
+              <li>
+                Call MCAD Online Learning:{" "}
+                <a href="tel:6128743618">(612) 874-3618</a>
+              </li>
+            </ul>
           </Accordion.Content>
         </Accordion>
       </div>

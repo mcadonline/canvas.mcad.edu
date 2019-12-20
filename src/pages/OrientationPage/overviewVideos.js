@@ -17,9 +17,13 @@ const overviewVideos = [
     title: "Checking Grades",
     src: "https://player.vimeo.com/video/74966156?title=0&byline=0&portrait=0"
   },
+  // {
+  //   title: "Using the Canvas Calendar",
+  //   src: "https://player.vimeo.com/video/78015141?title=0&byline=0&portrait=0"
+  // },
   {
     title: "Using the Canvas Calendar",
-    src: "https://player.vimeo.com/video/78015141?title=0&byline=0&portrait=0"
+    src: "https://www.youtube.com/embed/Fc7s86vEaZs"
   },
   {
     title: "Creating a Video",
