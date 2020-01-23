@@ -1,11 +1,13 @@
 import React from "react";
 import "./Book.scss";
 
-function withLink(Component, { url, isbn13 }) {
-  const bestGuessUrl = `https://www.amazon.com/s?k=${isbn13}&language=en_US&tag=minneapcolleg-20`;
+function withLink(Component, { url }) {
+  // const bestGuessUrl = `https://www.amazon.com/s?k=${isbn13}&language=en_US&tag=minneapcolleg-20`;
+
+  if (!url) return <Component />;
 
   return (
-    <a href={url || bestGuessUrl} rel="noopener noreferrer" target="_blank">
+    <a href={url} rel="noopener noreferrer" target="_blank">
       <Component />
     </a>
   );
@@ -20,7 +22,5 @@ export default ({ book }) => {
     </>
   );
 
-  return (
-    <li className="book">{withLink(BookName, { url: storeUrl, isbn13 })}</li>
-  );
+  return <li className="book">{withLink(BookName, { url: storeUrl })}</li>;
 };
