@@ -1,5 +1,6 @@
 .app-header {
   font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.25rem;
   text-align: center;
   text-transform: uppercase;
   padding: 0 1rem;
@@ -22,14 +23,6 @@
 
   a {
     color: var(--text-color);
-  }
-
-  .logo {
-    max-height: 0.75rem;
-    display: inline-block;
-    margin: 0 0.3333em;
-  }
-  a {
     text-decoration: none;
   }
 }

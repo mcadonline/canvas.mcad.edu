@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../img/MCAD_X.svg";
 
 import "./AppHeader.scss";
 
 export default ({ name = "Online Learning" }) => (
   <header className="app-header">
     <div className="container">
-      <Link to="/">
-        MCAD <img className="logo" src={logo} alt="X" /> {name}
-      </Link>
+      <Link to="/">MCAD</Link>
     </div>
   </header>
 );
