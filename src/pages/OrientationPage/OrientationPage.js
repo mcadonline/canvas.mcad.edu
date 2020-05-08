@@ -4,12 +4,11 @@ import Tip from "../../components/Tip";
 import Video from "../../components/Video";
 import Accordion from "../../components/Accordion";
 import overviewVideos from "./overviewVideos";
-// import canvasCourses from "./canvasCourses";
 
 import turtleImg from "../../img/dragon-turtle-amitchell.png";
 import "./OrientationPage.scss";
 
-const renderVideoAccordions = videos =>
+const renderVideoAccordions = (videos) =>
   videos.map(({ title, src, description }) => (
     <Accordion key={src}>
       <Accordion.Header>{title}</Accordion.Header>
@@ -38,12 +37,8 @@ export default () => (
 
         <p>
           This semester your course will be using a new Learning Management
-          System, Canvas LMS. It&rsquo;s similar to Blackboard (if you've used
-          that before), but many think it&rsquo;s more user friendly.
-        </p>
-
-        <p>
-          Before your first day of class, please review the resources below.
+          System, Canvas LMS. Before your first day of class, please review the
+          resources below.
         </p>
       </div>
     </section>
@@ -52,7 +47,7 @@ export default () => (
         <h2>An Overview of Canvas</h2>
         <Video
           title="Canvas Overview"
-          src="https://player.vimeo.com/video/74677642?title=0&byline=0&portrait=0"
+          src="https://player.vimeo.com/video/74677642?title=0&amp;byline=0&amp;portrait=0"
         />
         <Tip>
           Do you prefer watching videos on 1.25x or 2x speed? If you use Chrome,
