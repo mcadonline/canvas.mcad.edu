@@ -12,7 +12,7 @@ const overviewVideos = [
       "https://player.vimeo.com/video/75514816?title=0&amp;byline=0&amp;portrait=0",
   },
   {
-    title: "Send Direct Messages using the Conversations Inbox",
+    title: "Send Direct Messages using the Inbox",
     src:
       "https://player.vimeo.com/video/103432881?title=0&amp;byline=0&amp;portrait=0",
   },
