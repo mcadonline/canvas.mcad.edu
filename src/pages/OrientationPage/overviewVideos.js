@@ -3,19 +3,28 @@ import React from "react";
 const overviewVideos = [
   {
     title: "User Settings and Profile Pictures",
-    src: "https://player.vimeo.com/video/74243735?title=0&byline=0&portrait=0",
+    src:
+      "https://player.vimeo.com/video/74243735?title=0&amp;byline=0&amp;portrait=0",
   },
   {
     title: "Update Notification Preferences",
-    src: "https://player.vimeo.com/video/75514816?title=0&byline=0&portrait=0",
+    src:
+      "https://player.vimeo.com/video/75514816?title=0&amp;byline=0&amp;portrait=0",
   },
   {
-    title: "Communicating with Your Instructor and Peers",
-    src: "https://player.vimeo.com/video/74771648?title=0&byline=0&portrait=0",
+    title: "Send Direct Messages using the Conversations Inbox",
+    src:
+      "https://player.vimeo.com/video/103432881?title=0&amp;byline=0&amp;portrait=0",
+  },
+  {
+    title: "View, Reply, and Edit Discussions",
+    src:
+      "https://player.vimeo.com/video/75056432?title=0&amp;byline=0&amp;portrait=0",
   },
   {
     title: "Checking Grades",
-    src: "https://player.vimeo.com/video/74966156?title=0&byline=0&portrait=0",
+    src:
+      "https://player.vimeo.com/video/74966156?title=0&amp;byline=0&amp;portrait=0",
   },
   // {
   //   title: "Using the Canvas Calendar",
