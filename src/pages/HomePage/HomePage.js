@@ -22,12 +22,16 @@ export default () => (
       <div className="container grid">
         <article className="card">
           <h2>Students</h2>
-          <p>
-            <Link to="/orientation">Watch the Canvas Orientation</Link>
-          </p>
-          <p>
-            <Link to="/class-schedule">MCAD Class Schedule and Book List</Link>
-          </p>
+          <ul>
+            <li>
+              <Link to="/orientation">Watch the Canvas Orientation</Link>
+            </li>
+            <li>
+              <Link to="/class-schedule">
+                MCAD Class Schedule and Book List
+              </Link>
+            </li>
+          </ul>
         </article>
         <article className="card">
           <h2>Faculty</h2>

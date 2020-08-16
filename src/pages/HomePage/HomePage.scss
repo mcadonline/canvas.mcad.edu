@@ -51,18 +51,14 @@
 
   .card {
     background: hsla(0, 0%, 100%, 0.5);
-    padding: 1.5rem;
-    border-right: 1px solid #ccc;
+    padding: 1rem 1.5rem;
     text-align: center;
-  }
-  .card:last-child {
-    border-right: none;
   }
 
   .card h2 {
     font-weight: 300;
     text-transform: uppercase;
-    margin-top: 0.5em;
+    margin-top: 0;
     text-align: center;
   }
 
@@ -83,5 +79,10 @@
     top: 0;
     left: 0;
     z-index: -100;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   }
 }
