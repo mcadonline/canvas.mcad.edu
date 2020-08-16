@@ -1,13 +1,13 @@
 import { groupBy } from "ramda";
 
 function toArray(termYearDict) {
-  return Object.keys(termYearDict).map(termYearKey => {
+  return Object.keys(termYearDict).map((termYearKey) => {
     const coursesInTermYear = termYearDict[termYearKey];
     const [term, year] = termYearKey.split(" ");
     return {
       term,
       year,
-      courses: coursesInTermYear
+      courses: coursesInTermYear,
     };
   });
 }
@@ -48,22 +48,19 @@ function byCourseName(course1, course2) {
 
 export default async function fetchCourses() {
   const courses = await fetch(`https://ol-support.mcad.edu/api/courses`)
-    .then(res => res.json())
-    .catch(err => {
+    .then((res) => res.json())
+    .catch((err) => {
       console.error(err.message);
       throw err;
     });
 
   const termYear = ({ term, year }) => `${term} ${year}`;
-
   const termYearDict = groupBy(termYear, courses);
-
   const termYearArray = toArray(termYearDict);
-
   const sortedTermYearArray = termYearArray.sort(byStartDate);
 
-  return sortedTermYearArray.map(termYear => ({
+  return sortedTermYearArray.map((termYear) => ({
     ...termYear,
-    courses: termYear.courses.sort(byCourseName)
+    courses: termYear.courses.sort(byCourseName),
   }));
 }

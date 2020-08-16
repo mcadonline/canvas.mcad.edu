@@ -29,6 +29,21 @@ export default () => (
             <Link to="/class-schedule">MCAD Class Schedule and Book List</Link>
           </p>
         </article>
+        <article className="card">
+          <h2>Faculty</h2>
+          <ul>
+            <li>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdio_botAdY-4GTfMrhqXVDX2HbphZCnEy-PTsDm9Hr-B6EcQ/viewform">
+                Course Copy Request
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS4NHKVcuzCnsqJ-0_IhzmTS35EkEWxlu1YWBpGR5wJ62h7g/viewform">
+                Workshop: Priming the Canvas
+              </a>
+            </li>
+          </ul>
+        </article>
       </div>
     </section>
     <Sketch className="bg-sketch" />

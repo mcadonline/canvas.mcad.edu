@@ -51,11 +51,12 @@
 
   .card {
     background: hsla(0, 0%, 100%, 0.5);
-    padding: 1rem;
-    margin: 1rem auto;
-    border-radius: 0.25rem;
-    max-width: 40rem;
+    padding: 1.5rem;
+    border-right: 1px solid #ccc;
     text-align: center;
+  }
+  .card:last-child {
+    border-right: none;
   }
 
   .card h2 {
