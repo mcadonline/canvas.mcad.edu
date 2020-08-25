@@ -1,5 +1,9 @@
 import React from "react";
 
-export default ({ children, className = "" }) => {
-  return <div className={`${className} accordion__content`}>{children}</div>;
+export default ({ children, className = "", ...rest }) => {
+  return (
+    <div className={`${className} accordion__content`} {...rest}>
+      {children}
+    </div>
+  );
 };

@@ -5,11 +5,16 @@ import AccordionContent from "./AccordionContent";
 
 import "./Accordion.scss";
 
-const Accordion = ({ isOpenByDefault = false, children, className = "" }) => {
+const Accordion = ({
+  isOpenByDefault = false,
+  children,
+  className = "",
+  ...rest
+}) => {
   const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
   return (
-    <AccordionContext.Provider value={{ isOpen, setIsOpen }}>
+    <AccordionContext.Provider {...rest} value={{ isOpen, setIsOpen }}>
       <article className={`${className} accordion ${isOpen ? "is-open" : ""}`}>
         {children}
       </article>

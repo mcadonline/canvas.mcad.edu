@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AccordionContext from "./AccordionContext";
 
-export default ({ children, className = "" }) => {
+export default ({ children, className = "", ...rest }) => {
   const { isOpen, setIsOpen } = useContext(AccordionContext);
 
   function handleClick(e) {
@@ -10,7 +10,11 @@ export default ({ children, className = "" }) => {
   }
 
   return (
-    <header className={`${className} accordion__header`} onClick={handleClick}>
+    <header
+      className={`${className} accordion__header`}
+      onClick={handleClick}
+      {...rest}
+    >
       {children}
     </header>
   );
