@@ -76,7 +76,9 @@ export default () => (
         <h2 id="tips-for-ol-students">Frequently Asked Questions</h2>
 
         <Accordion>
-          <Accordion.Header>Where do I go to login to Canvas?</Accordion.Header>
+          <Accordion.Header id="faq-where-to-login">
+            Where do I go to login to Canvas?
+          </Accordion.Header>
           <Accordion.Content>
             <p>
               Canvas LMS is the website where you will be learning online. Go
@@ -93,7 +95,9 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>What&rsquo;s my username?</Accordion.Header>
+          <Accordion.Header id="faq-username">
+            What&rsquo;s my username?
+          </Accordion.Header>
           <Accordion.Content>
             <p>
               If you&rsquo;re enrolled in an online course, you should have
@@ -121,7 +125,9 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>What&rsquo;s my password?</Accordion.Header>
+          <Accordion.Header id="faq-password">
+            What&rsquo;s my password?
+          </Accordion.Header>
           <Accordion.Content>
             <p>
               To set or reset your password, go to:{" "}
@@ -162,7 +168,45 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>
+          <Accordion.Header id="faq-update-name">
+            How do I change my name in Canvas (and other MCAD systems)?
+          </Accordion.Header>
+          <Accordion.Content>
+            <p>
+              You can change your institutionally recognized name by updating
+              your record in <a href="https://my.mcad.edu">my.mcad.edu</a>.
+            </p>
+
+            <p>
+              See:{" "}
+              <a href="https://intranet.mcad.edu/kb/submitting-institutionally-recognized-name-update">
+                Submitting an IR Name Update
+              </a>
+              .
+            </p>
+          </Accordion.Content>
+        </Accordion>
+        <Accordion>
+          <Accordion.Header id="faq-personal-pronouns">
+            How do I set my personal pronouns?
+          </Accordion.Header>
+          <Accordion.Content>
+            <p>
+              Canvas makes it easy to set your personal pronouns in your
+              profile.
+            </p>
+
+            <p>
+              See:{" "}
+              <a href="https://intranet.mcad.edu/kb/how-do-i-set-my-personal-pronouns-canvas">
+                How to Set Personal Pronouns in Canvas
+              </a>
+              .
+            </p>
+          </Accordion.Content>
+        </Accordion>
+        <Accordion>
+          <Accordion.Header id="faq-books">
             What books or supplies are required for my class?
           </Accordion.Header>
           <Accordion.Content>
@@ -188,7 +232,7 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>
+          <Accordion.Header id="faq-course-open-date">
             I don&rsquo;t see my class on Canvas. When will it show up?
           </Accordion.Header>
           <Accordion.Content>
@@ -203,7 +247,7 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>
+          <Accordion.Header id="faq-day-one">
             What do I do on the first day of my online class?
           </Accordion.Header>
           <Accordion.Content>
@@ -223,7 +267,7 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>
+          <Accordion.Header id="faq-online-course-workload">
             What&rsquo;s the workload in an online course?
           </Accordion.Header>
           <Accordion.Content>
@@ -234,7 +278,9 @@ export default () => (
           </Accordion.Content>
         </Accordion>
         <Accordion>
-          <Accordion.Header>Can someone help me?</Accordion.Header>
+          <Accordion.Header id="faq-getting-help">
+            Can someone help me?
+          </Accordion.Header>
           <Accordion.Content>
             <p>You bet!</p>
 
