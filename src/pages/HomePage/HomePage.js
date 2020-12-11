@@ -42,8 +42,8 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS4NHKVcuzCnsqJ-0_IhzmTS35EkEWxlu1YWBpGR5wJ62h7g/viewform">
-                Workshop: Priming the Canvas
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaNs9FkNpQo4Sb0O6ILojlil4IMQPFt91YX_BBu-rcntIhww/viewform">
+                Faculty Workshop Sign Up
               </a>
             </li>
           </ul>
