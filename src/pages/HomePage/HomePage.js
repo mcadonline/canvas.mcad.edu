@@ -46,6 +46,11 @@ export default () => (
                 Faculty Workshop Sign Up
               </a>
             </li>
+            <li>
+              <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUtjY1V2WDhhNVJEfGRlZmF1bHR8ZjVjMWMyZTliOTY3ZTIzNTFkY2QxMWMzZmUxMzA0Y2U">
+                Course Consulting Session Sign Up
+              </a>
+            </li>
           </ul>
         </article>
       </div>
