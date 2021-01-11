@@ -42,13 +42,8 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaNs9FkNpQo4Sb0O6ILojlil4IMQPFt91YX_BBu-rcntIhww/viewform">
-                Faculty Workshop Sign Up
-              </a>
-            </li>
-            <li>
-              <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUtjY1V2WDhhNVJEfGRlZmF1bHR8ZjVjMWMyZTliOTY3ZTIzNTFkY2QxMWMzZmUxMzA0Y2U">
-                Course Consulting Session Sign Up
+              <a href="https://docs.google.com/document/d/1us8wy7luBMBsNxgIxZ4vSL9n5xeAkhePOym05oc09fA/edit">
+                Prep Week Workshops and Course Consulting (Spring 2021)
               </a>
             </li>
           </ul>
