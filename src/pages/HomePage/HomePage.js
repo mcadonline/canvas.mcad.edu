@@ -37,13 +37,18 @@ export default () => (
           <h2>Faculty</h2>
           <ul>
             <li>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdio_botAdY-4GTfMrhqXVDX2HbphZCnEy-PTsDm9Hr-B6EcQ/viewform">
-                Course Copy Request
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaNs9FkNpQo4Sb0O6ILojlil4IMQPFt91YX_BBu-rcntIhww/viewform">
+                Sign-up for Workshops
               </a>
             </li>
             <li>
-              <a href="https://docs.google.com/document/d/1us8wy7luBMBsNxgIxZ4vSL9n5xeAkhePOym05oc09fA/edit">
-                Prep Week Workshops and Course Consulting (Spring 2021)
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdio_botAdY-4GTfMrhqXVDX2HbphZCnEy-PTsDm9Hr-B6EcQ/viewform">
+                Import Course Content
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/playlist?list=PLmMnwPxjH_hKJ4K5qzfoIZNSRrvGVzXyX">
+                Google Meet Tutorials
               </a>
             </li>
           </ul>
