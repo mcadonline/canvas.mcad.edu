@@ -19,7 +19,7 @@ const renderVideoAccordions = (videos) =>
     </Accordion>
   ));
 
-export default () => (
+const OrientationPage = () => (
   <DefaultLayout className="orientation-student-page">
     <header className="page-title">
       <h1 className="container">
@@ -408,3 +408,5 @@ export default () => (
     </section>
   </DefaultLayout>
 );
+
+export default OrientationPage;
