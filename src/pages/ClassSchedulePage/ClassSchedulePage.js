@@ -8,28 +8,30 @@ import prettifyTerm from "../../lib/prettifyTerm";
 
 import "./ClassSchedulePage.scss";
 
-const withTextForSearching = course => {
+const withTextForSearching = (course) => {
   const textForSearching = [
     course.courseCode,
     course.name,
     course.instructor.firstName || "",
     course.instructor.lastName || "",
-    course.isOnlineCourse ? "online" : ""
+    course.isOnlineCourse ? "online" : "",
   ]
     .join("|")
     .toLowerCase();
   return {
     ...course,
-    textForSearching
+    textForSearching,
   };
 };
 
-const bySearchTerm = searchTerm => ({ textForSearching }) => {
-  const lowercaseSearchTerm = searchTerm.toLowerCase();
-  return textForSearching.includes(lowercaseSearchTerm);
-};
+const bySearchTerm =
+  (searchTerm) =>
+  ({ textForSearching }) => {
+    const lowercaseSearchTerm = searchTerm.toLowerCase();
+    return textForSearching.includes(lowercaseSearchTerm);
+  };
 
-export default () => {
+const ClassSchedulePage = () => {
   const [coursesByTermYear, setCoursesByTermYear] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
   const [searchFilter, setSearchFilter] = useState("");
@@ -38,9 +40,9 @@ export default () => {
     async function fetchData() {
       try {
         const data = await fetchCoursesBySemester();
-        const coursesWithTextForSearching = data.map(termYear => ({
+        const coursesWithTextForSearching = data.map((termYear) => ({
           ...termYear,
-          courses: termYear.courses.map(withTextForSearching)
+          courses: termYear.courses.map(withTextForSearching),
         }));
 
         setCoursesByTermYear(coursesWithTextForSearching);
@@ -139,3 +141,5 @@ export default () => {
     </DefaultLayout>
   );
 };
+
+export default ClassSchedulePage;

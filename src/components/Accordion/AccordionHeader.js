@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import AccordionContext from "./AccordionContext";
 
-export default ({ children, className = "", ...rest }) => {
+const AccordionHeader = ({ children, className = "", ...rest }) => {
   const { isOpen, setIsOpen } = useContext(AccordionContext);
 
   function handleClick(e) {
@@ -19,3 +19,5 @@ export default ({ children, className = "", ...rest }) => {
     </header>
   );
 };
+
+export default AccordionHeader;

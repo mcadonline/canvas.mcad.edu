@@ -5,7 +5,7 @@ import Sketch from "../../components/Sketch/Sketch";
 
 import "./HomePage.scss";
 
-export default () => (
+const HomePage = () => (
   <DefaultLayout className="home-page">
     <section className="section hero">
       <div className="container">
@@ -58,3 +58,5 @@ export default () => (
     <Sketch className="bg-sketch" />
   </DefaultLayout>
 );
+
+export default HomePage;

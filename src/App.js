@@ -5,7 +5,7 @@ import OrientationPage from "./pages/OrientationPage/OrientationPage";
 import ClassSchedulePage from "./pages/ClassSchedulePage/ClassSchedulePage";
 import "./App.css";
 
-export default props => (
+const routes = (props) => (
   <Router>
     <Switch>
       <Route {...props} exact path="/" component={HomePage} />
@@ -15,3 +15,5 @@ export default props => (
     </Switch>
   </Router>
 );
+
+export default routes;

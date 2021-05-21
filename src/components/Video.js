@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Video.scss";
 
-export default ({ title, src, children }) => (
+const Video = ({ title, src, children }) => (
   <div className="video">
     <iframe
       title={title}
@@ -17,3 +17,5 @@ export default ({ title, src, children }) => (
     {children}
   </div>
 );
+
+export default Video;

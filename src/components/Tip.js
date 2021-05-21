@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Tip.css";
 
-export default ({ children }) => (
+const Tip = ({ children }) => (
   <aside className="tip">
     <p>
       <b>
@@ -15,3 +15,5 @@ export default ({ children }) => (
     </p>
   </aside>
 );
+
+export default Tip;

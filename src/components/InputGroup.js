@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./InputGroup.scss";
 
-export default ({ label, id, className, icon, ...rest }) => {
+const InputGroup = ({ label, id, className, icon, ...rest }) => {
   const [hasFocus, setHasFocus] = useState(false);
 
   function handleFocus(e) {
@@ -18,7 +18,7 @@ export default ({ label, id, className, icon, ...rest }) => {
   const classNames = [
     "input-group",
     className || "",
-    hasFocus ? "is-active" : ""
+    hasFocus ? "is-active" : "",
   ].join(" ");
 
   return (
@@ -31,3 +31,5 @@ export default ({ label, id, className, icon, ...rest }) => {
     </div>
   );
 };
+
+export default InputGroup;

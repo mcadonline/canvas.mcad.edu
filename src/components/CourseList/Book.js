@@ -13,7 +13,7 @@ function withLink(Component, { url }) {
   );
 }
 
-export default ({ book }) => {
+const Book = ({ book }) => {
   const { isbn13, title, storeUrl } = book;
   const BookName = () => (
     <>
@@ -24,3 +24,5 @@ export default ({ book }) => {
 
   return <li className="book">{withLink(BookName, { url: storeUrl })}</li>;
 };
+
+export default Book;

@@ -15,7 +15,7 @@ const BookList = ({ books, title }) => {
     <section className="book-list">
       <h2>{title}</h2>
       <ul>
-        {books.map(book => (
+        {books.map((book) => (
           <Book key={book.isbn13} book={book} />
         ))}
       </ul>
@@ -31,13 +31,13 @@ function getLongDay(shortDayCodes) {
     R: "Thursday",
     F: "Friday",
     S: "Saturday",
-    U: "Sunday"
+    U: "Sunday",
   };
   if (!shortDayCodes) return "Asynchronous";
 
   return shortDayCodes
     .split("")
-    .map(char => lookup[char])
+    .map((char) => lookup[char])
     .join(", ");
 }
 
@@ -51,13 +51,13 @@ const Meeting = ({ location, days, startTime, endTime, isOnlineCourse }) => (
 
 const MeetingList = ({ meetings }) => (
   <ul className="meeting-list">
-    {meetings.map(m => (
+    {meetings.map((m) => (
       <Meeting key={[m.location, m.days, m.startTime].join("-")} {...m} />
     ))}
   </ul>
 );
 
-export default ({ course }) => {
+const Course = ({ course }) => {
   const {
     name,
     courseCode,
@@ -67,12 +67,12 @@ export default ({ course }) => {
     instructor,
     books,
     meetings,
-    isOnlineCourse
+    isOnlineCourse,
   } = course;
 
   const [requiredBooks, optionalBooks] = partition(
     // if isRequired field doesn't exist on book, assume it is required
-    book => book.isRequired === undefined || book.isRequired,
+    (book) => book.isRequired === undefined || book.isRequired,
     books
   );
 
@@ -122,3 +122,5 @@ export default ({ course }) => {
     </Accordion>
   );
 };
+
+export default Course;
