@@ -7,4 +7,5 @@ Used for showing announcements or resources to users.
 ## Maintainer
 
 MCAD Online Learning
+
 [online@mcad.edu](mailto:online@mcad.edu)
